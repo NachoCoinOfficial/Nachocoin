@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,68 +8,89 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf0;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Comic Neue', cursive;
+  background-color: #fff9f0;
+  color: #2e2e2e;
+  line-height: 1.7;
 }
 
 .logo {
-  width: 120px;
-  margin: 10px auto;
+  width: 130px;
+  margin: 20px auto;
   display: block;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
 header {
-  background-color: #ff7043;
+  background: linear-gradient(to right, #ff7043, #ffa726);
   color: white;
   text-align: center;
-  padding: 30px 20px;
+  padding: 40px 20px;
+  border-bottom: 5px solid #ffb74d;
 }
 
 .cta-button {
   display: inline-block;
-  margin-top: 15px;
+  margin-top: 20px;
   background: #fff;
   color: #ff7043;
   border: 2px solid #fff;
-  padding: 10px 20px;
+  padding: 12px 25px;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 8px;
-  transition: background 0.3s ease;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 .cta-button:hover {
   background: #ffe0b2;
+  color: #d84315;
 }
 
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .box {
-  background: #fff3e0;
-  margin: 20px 0;
-  padding: 20px;
-  border-radius: 10px;
+  background: #fff8e1;
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.box:hover {
+  background-color: #fff3cd;
 }
 
 h2 {
-  color: #d84315;
-  margin-bottom: 10px;
+  color: #e65100;
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+ol li, ul li {
+  margin: 10px 0;
 }
 
 footer {
-  background-color: #ff7043;
+  background: #ff7043;
   color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 25px;
+  margin-top: 50px;
+  font-size: 14px;
 }
 
 a {
   color: #d84315;
   text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: #bf360c;
 }
