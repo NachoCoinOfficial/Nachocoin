@@ -1,0 +1,344 @@
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(255, 152, 0, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.hero-logo {
+  width: 180px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: translateY(-5px);
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin: 20px 0;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(255, 152, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 20px 0 40px;
+  color: #ff9800;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+  border: none;
+  font-size: 1.1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.section {
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 30px 0;
+  transition: transform 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-5px);
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: #ff9800;
+}
+
+.section.light {
+  background-color: #1a1a1a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section.dark {
+  background-color: #2d2d2d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.section ul, .section ol {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section li {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.section a {
+  color: #ff9800;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section a:hover {
+  color: #ff5722;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #1a1a1a;
+  color: #ff9800;
+  border-top: 1px solid rgba(255, 152, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .section {
+    padding: 40px 20px;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  border: 2px solid #ff9800;
+  font-size: 1.1rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 152, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  padding: 30px;
+  background: rgba(255, 152, 0, 0.05);
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature i {
+  font-size: 2.5rem;
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  color: #ff9800;
+  margin: 15px 0;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.step {
+  position: relative;
+  padding: 30px;
+  background: rgba(255, 152, 0, 0.05);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: #ff9800;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tokenomics-item {
+  padding: 30px;
+  background: rgba(255, 152, 0, 0.05);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.tokenomics-item h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.roadmap-item {
+  padding: 30px;
+  background: rgba(255, 152, 0, 0.05);
+  border-radius: 15px;
+}
+
+.roadmap-item h3 {
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.roadmap-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.roadmap-item li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roadmap-item.completed {
+  border: 2px solid #ff9800;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #ff9800;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+}
+
+.social-link i {
+  font-size: 2rem;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .features-grid,
+  .steps-container,
+  .tokenomics-grid,
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
